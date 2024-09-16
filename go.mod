@@ -1,4 +1,4 @@
-module torgi.gov.ru
+module app
 
 go 1.18
 

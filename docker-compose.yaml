@@ -4,7 +4,7 @@ services:
   postgres:
     image: postgres
     environment:
-      POSTGRES_DB: torgi_gov
+      POSTGRES_DB: example_db
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
     ports:

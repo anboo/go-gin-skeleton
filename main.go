@@ -9,9 +9,10 @@ import (
 	"syscall"
 	"time"
 
+	"app/resource"
+
 	"github.com/gin-gonic/gin"
 	"github.com/rs/zerolog/log"
-	"torgi.gov.ru/resource"
 )
 
 func main() {
@@ -50,11 +51,6 @@ func main() {
 	err = srv.Shutdown(ctx)
 	if err != nil {
 		log.Err(err).Msg("shutdown server")
-	}
-
-	select {
-	case <-ctx.Done():
-		log.Error().Msg("timeout of 10 seconds")
 	}
 
 	log.Info().Msg("successfully shutdown service")
